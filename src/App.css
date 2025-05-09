@@ -1,0 +1,66 @@
+/* app.css */
+
+/* Ensure full height usage and reset default margins */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent overall page scroll */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Main container styles */
+  .quiz-container {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  /* Scrollable area for questions */
+  .question-area {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+  
+  /* Option styling */
+  .options {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Button container */
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  /* Responsive success message */
+  .success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Feedback message */
+  .feedback {
+    margin-top: 10px;
+    color: #333;
+    font-style: italic;
+  }
+  
+  /* Optional: add scroll to quiz title area if long */
+  .user-info {
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
