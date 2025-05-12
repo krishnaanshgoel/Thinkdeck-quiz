@@ -12,6 +12,12 @@
   const sequelize = new Sequelize(PG_URI, {
     dialect: "postgres",
     logging: false,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false, // Accept self-signed cert
+      },
+    },
   });
 
   module.exports = sequelize;
