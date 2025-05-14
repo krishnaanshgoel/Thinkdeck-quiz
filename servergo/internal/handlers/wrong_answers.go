@@ -10,9 +10,9 @@ import (
 
 func GetWrongAnswers(c *gin.Context) {
     userID := c.GetString("userID")
-    var wrongAnswers []models.ErrorAnswer
+    var wrongAnswers []models.ErrorAnswers
 
-    if err := database.DB.Where("user_id = ?", userID).Find(&wrongAnswers).Error; err != nil {
+    if err := databases.DB.Where("user_id = ?", userID).Find(&wrongAnswers).Error; err != nil {
         c.JSON(http.StatusInternalServerError, gin.H{"error": "Error fetching wrong answers"})
         return
     }
